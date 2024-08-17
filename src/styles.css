@@ -178,7 +178,7 @@ textarea::placeholder {
 
     footer {
         position: fixed;
-        width: auto;
+        width: 110%;
         text-align: center;
     }
 
