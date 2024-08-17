@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/src/asset/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <title>Encriptador de Texto</title>
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="logo_header">
+        <img src="./asset/logo.svg" alt="logo">
+        <h1>LATAM</h1>
+      </div>
+
+      <div class="input-text">
+        <textarea name="encrypText" id="encrypText" rows="10"
+          placeholder="Ingrese la cadena de texto que desea encriptar o desencriptar."></textarea>
+
+        <div class="input-text-advice-text">
+          <img src="./asset/ic_alert.svg" alt="advice" width="16px" height="16px">
+          <span>Solo letras minúsculas y sin acentos</span>
+        </div>
+
+        <div class="input-text-btn">
+          <button id="btn-encryp" onclick="encrypText()">Encriptar</button>
+          <button id="btn-decode" onclick="decodeText()">Desencriptar</button>
+        </div>
+      </div>
+
+      <div class="show-decode">
+        <p id="textDeCode"> Texto desencriptado </p>
+        <div class="show-decode-text">
+          <img src="./asset/imagen.svg" alt="imagen" width="336px" height="304px">
+          <h1>Ningún mensaje fue encontrado</h1>
+          <span>Ingresa el texto que desees encriptar o desencriptar.</span>
+        </div>
+        <div class="input-text-btn clean">
+          <button id="btn-copy" onclick="copyText()">Copiar</button>
+          <button id="btn-clean" onclick="cleanText()">Limpiar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span> ©️Desarrallado por Juan David Gutierrez Vidal </span> <br>
+    <b>ProyectoONE </b> <br>
+    <span>Todos los derechos reservados</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
