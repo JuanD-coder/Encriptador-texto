@@ -177,6 +177,7 @@ textarea::placeholder {
     }
 
     footer {
+        position: fixed;
         width: auto;
         text-align: center;
     }
