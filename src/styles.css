@@ -177,8 +177,8 @@ textarea::placeholder {
     }
 
     footer {
-        position: relative;
-        width: 110%;
+        width: auto;
+        text-align: center;
     }
 
     .input-text {
