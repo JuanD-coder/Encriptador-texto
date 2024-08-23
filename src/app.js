@@ -36,7 +36,14 @@ function showToast(message, backgroundColor) {
 }
 
 function encrypText() {
-    let charMinuscula = inputText.value.toLowerCase();
+    let text = inputText.value
+
+    if (hasSpecialCharacters(text)) {
+        showToast("El texto contiene caracteres especiales. Por favor, elimínalos antes de continuar.", "#f44336");
+        return;  
+    }
+
+    let charMinuscula = text.toLowerCase();
     let caracter = charMinuscula.split('');
     let encrypText = []
 
@@ -49,6 +56,12 @@ function encrypText() {
     });
 
     showDeCode(encrypText.join(''));
+}
+
+function hasSpecialCharacters(text) {
+    const specialCharsRegex = /[^\w\s]/;
+    const accentedCharsRegex = /[\u00C0-\u00FF]/;
+    return specialCharsRegex.test(text) || accentedCharsRegex.test(text);
 }
 
 function showDeCode(text) {
